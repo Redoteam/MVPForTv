@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.redoteam"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:name="com.redoteam.tv.app.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon, android:label, android:theme">
+
+        <!--
+       autolayout meta
+       配置设计图的宽高,配合AutoLauout控件使用,在设计图尺寸以外的其它尺寸手机上,也能达到和设计图一样的效果
+       注意: 本框架并不强制你使用 AutoLayout,如果你不想使用 AutoLayout,就不要配置下面的 meta-data
+        -->
+        <meta-data
+            android:name="design_width"
+            android:value="1280"/>
+        <meta-data
+            android:name="design_height"
+            android:value="720"/>
+
+        <!-- core配置 -->
+        <meta-data
+            android:name="com.redoteam.tv.app.GlobalConfiguration"
+            android:value="ConfigModule"/>
+
+        <activity
+            android:name="com.redoteam.tv.mvp.ui.activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+
+        </activity>
+        <activity android:name="com.redoteam.tv.common.activity.PreviewImageActivity">
+        </activity>
+        <activity android:name="com.redoteam.tv.mvp.ui.activity.TestActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

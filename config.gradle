@@ -1,0 +1,60 @@
+
+ext {
+
+    android = [
+            "buildToolsVersion": "27.0.3",
+            "compileSdkVersion": 27,
+            "minSdkVersion"    : 16,
+            "targetSdkVersion" : 27,
+            "versionCode"      : 1,
+            "versionName"      : "1.0.1"
+    ]
+
+    version = [
+            androidSupportSdkVersion: "27.1.1",
+            constraintLayout: "1.1.2",
+            retrofitSdkVersion      : "2.4.0",
+            glideSdkVersion         : "4.6.1",
+            butterknifeSdkVersion   : "8.8.1",
+            rxlifecycleSdkVersion   : "1.0",
+            rxlifecycle2SdkVersion  : "2.2.1",
+            espressoSdkVersion      : "3.0.1",
+            canarySdkVersion        : "1.5.4",
+            gsyVideoVersion         : "5.0.1",
+    ]
+
+    dependencies = [
+            "support-v4"               : "com.android.support:support-v4:${version.androidSupportSdkVersion}",
+            "appcompat-v7"             : "com.android.support:appcompat-v7:${version.androidSupportSdkVersion}",
+            "constraint-layout"        : "com.android.support.constraint:constraint-layout:${version.constraintLayout}",
+            "recyclerview-v7"          : "com.android.support:recyclerview-v7:${version["androidSupportSdkVersion"]}",
+            "gridlayout-v7"            : "com.android.support:gridlayout-v7:${version["androidSupportSdkVersion"]}",
+            //network
+            "retrofit"                 : "com.squareup.retrofit2:retrofit:${version["retrofitSdkVersion"]}",
+            "retrofit-converter-gson"  : "com.squareup.retrofit2:converter-gson:${version["retrofitSdkVersion"]}",
+            "retrofit-adapter-rxjava"  : "com.squareup.retrofit2:adapter-rxjava:${version["retrofitSdkVersion"]}",
+            "retrofit-adapter-rxjava2" : "com.squareup.retrofit2:adapter-rxjava2:${version["retrofitSdkVersion"]}",
+            "okhttp3"                  : "com.squareup.okhttp3:okhttp:3.10.0",
+            "okhttp-urlconnection"     : "com.squareup.okhttp:okhttp-urlconnection:2.0.0",
+            "glide"                    : "com.github.bumptech.glide:glide:${version["glideSdkVersion"]}",
+            "glide-compiler"           : "com.github.bumptech.glide:compiler:${version["glideSdkVersion"]}",
+            "glide-loader-okhttp3"     : "com.github.bumptech.glide:okhttp3-integration:${version["glideSdkVersion"]}",
+            "picasso"                  : "com.squareup.picasso:picasso:2.5.2",
+            //view
+            "autolayout"               : "com.zhy:autolayout:1.4.5",
+            "butterknife"              : "com.jakewharton:butterknife:${version["butterknifeSdkVersion"]}",
+            "butterknife-compiler"     : "com.jakewharton:butterknife-compiler:${version["butterknifeSdkVersion"]}",
+            "base-rvadapter"           : "com.zhy:base-rvadapter:3.0.3",
+
+            "timber"                   : "com.jakewharton.timber:timber:4.7.0",
+
+            "rxcache-jolyglot-gson"    : "com.github.VictorAlbertos.Jolyglot:gson:0.0.4",
+
+            "rxandroid2"                : "io.reactivex.rxjava2:rxandroid:2.0.2",
+
+            //video
+            "gsy-video-player-java"     : "com.shuyu:gsyVideoPlayer-java:${version["gsyVideoVersion"]}",
+            "gsy-video-player-ex_so"    : "com.shuyu:gsyVideoPlayer-ex_so:${version["gsyVideoVersion"]}",
+
+    ]
+}
